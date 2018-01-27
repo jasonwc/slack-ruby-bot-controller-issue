@@ -1,0 +1,500 @@
+~/workspace/controller-issue (master #) $ ruby run.rb
+I, [2018-01-27T14:26:49.026710 #47697]  INFO -- : post https://slack.com/api/rtm.start
+D, [2018-01-27T14:26:49.026807 #47697] DEBUG -- request: Accept: "application/json; charset=utf-8"
+User-Agent: "Slack Ruby Client/0.10.0"
+Content-Type: "application/x-www-form-urlencoded"
+I, [2018-01-27T14:26:49.723311 #47697]  INFO -- Status: 200
+D, [2018-01-27T14:26:49.723434 #47697] DEBUG -- response: content-type: "application/json; charset=utf-8"
+transfer-encoding: "chunked"
+connection: "close"
+access-control-allow-origin: "*"
+cache-control: "private, no-cache, no-store, must-revalidate"
+date: "Sat, 27 Jan 2018 21:26:49 GMT"
+expires: "Mon, 26 Jul 1997 05:00:00 GMT"
+pragma: "no-cache"
+referrer-policy: "no-referrer"
+server: "Apache"
+strict-transport-security: "max-age=31536000; includeSubDomains; preload"
+vary: "Accept-Encoding"
+x-accepted-oauth-scopes: "rtm:stream,client"
+x-content-type-options: "nosniff"
+x-oauth-scopes: "identify,read,post,client,apps"
+x-slack-backend: "h"
+x-slack-req-id: "2db422a1-1f45-4f60-91b2-da23b770363d"
+x-xss-protection: "0"
+x-cache: "Miss from cloudfront"
+via: "1.1 d03e57da6d2a774444e63ebbe2e7e9c0.cloudfront.net (CloudFront)"
+x-amz-cf-id: "XxB3nf5_9wQmngtm2CHkuxvFwj6HXhD3nYUa5-RuUOnvay4O2dv7XQ=="
+D, [2018-01-27T14:26:50.105195 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#connect!: WebSocket::Driver::Client
+D, [2018-01-27T14:26:51.277770 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#write: GET /websocket/eQdlLPLWdDjnglPOM28RaSv0QPuj--DRaCsfRyAlRxS9tVIe3gOB-9Fux1ubW1wJgWnGkd38JRX-XH7FW_3iFxCt9A_rg0WO_Jg2R_n5oR6NIu05MaKIwkkZD24X9Hcayv8y7DhgMfFvXw==/2?dp=1 HTTP/1.1
+Host: cerberus-xxxx.lb.slack-msgs.com
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: e0IG0eHv5iCKl2Qm77L7Aw==
+Sec-WebSocket-Version: 13
+
+
+D, [2018-01-27T14:26:51.317603 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: HTTP/1.1 101 Switching Protocols
+upgrade: websocket
+connection: upgrade
+sec-websocket-accept: Gk/pzYG13hXOUUkI8Yq6xlRHbKU=
+X-Via: haproxy-lb-mp-lbcert-pdx-5u9f
+
+
+D, [2018-01-27T14:26:51.322316 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::OpenEvent
+D, [2018-01-27T14:26:51.655834 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �{"type": "hello"}
+D, [2018-01-27T14:26:51.659619 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type": "hello"}
+D, [2018-01-27T14:26:51.659768 #47697] DEBUG -- SlackRubyBot::Client#dispatch: type=hello
+I, [2018-01-27T14:26:51.659863 #47697]  INFO -- : Successfully connected team Mavenlink (T024WCTEF) to https://mavenlink.slack.com.
+D, [2018-01-27T14:26:59.233847 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"member_left_channel","user":"U0VUQ6UMV","channel":"C8ZKK5XV1","channel_type":"C","team":"T024WCTEF","event_ts":"1517088418.000134","ts":"1517088418.000134"}
+D, [2018-01-27T14:26:59.234118 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"member_left_channel","user":"U0VUQ6UMV","channel":"C8ZKK5XV1","channel_type":"C","team":"T024WCTEF","event_ts":"1517088418.000134","ts":"1517088418.000134"}
+D, [2018-01-27T14:26:59.234360 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=C8ZKK5XV1, channel_type=C, event_ts=1517088418.000134, team=T024WCTEF, ts=1517088418.000134, type=member_left_channel, user=U0VUQ6UMV
+D, [2018-01-27T14:26:59.234595 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"user":"U0VUQ6UMV","user_profile":{"avatar_hash":"9d2223dadadb","image_72":"https:\/\/avatars.slack-edge.com\/2017-09-11\/239403475172_9d2223dadadb2a8a8c65_72.jpg","first_name":"Jason","real_name":"Jason Carter","display_name":"json","team":"T024WCTEF","name":"json","is_restricted":false,"is_ultra_restricted":false},"type":"message","subtype":"channel_leave","team":"T024WCTEF","text":"<@U0VUQ6UMV> has left the channel","channel":"C8ZKK5XV1","event_ts":"1517088418.000135","ts":"1517088418.000135"}
+D, [2018-01-27T14:26:59.234713 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"user":"U0VUQ6UMV","user_profile":{"avatar_hash":"9d2223dadadb","image_72":"https:\/\/avatars.slack-edge.com\/2017-09-11\/239403475172_9d2223dadadb2a8a8c65_72.jpg","first_name":"Jason","real_name":"Jason Carter","display_name":"json","team":"T024WCTEF","name":"json","is_restricted":false,"is_ultra_restricted":false},"type":"message","subtype":"channel_leave","team":"T024WCTEF","text":"<@U0VUQ6UMV> has left the channel","channel":"C8ZKK5XV1","event_ts":"1517088418.000135","ts":"1517088418.000135"}
+D, [2018-01-27T14:26:59.234995 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=C8ZKK5XV1, event_ts=1517088418.000135, subtype=channel_leave, team=T024WCTEF, text=<@U0VUQ6UMV> has left the channel, ts=1517088418.000135, type=message, user=U0VUQ6UMV, user_profile=avatar_hash=9d2223dadadb, display_name=json, first_name=Jason, image_72=https://avatars.slack-edge.com/2017-09-11/239403475172_9d2223dadadb2a8a8c65_72.jpg, is_restricted=false, is_ultra_restricted=false, name=json, real_name=Jason Carter, team=T024WCTEF
+D, [2018-01-27T14:27:36.918228 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �
+D, [2018-01-27T14:27:36.918416 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#write: �����
+D, [2018-01-27T14:28:36.925231 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �
+D, [2018-01-27T14:28:36.925396 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#write: �����/
+D, [2018-01-27T14:28:47.370045 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~{"type":"group_joined","channel":{"id":"G8ZKL37JP","name":"bug-slack-ruby-bot","is_channel":false,"is_group":true,"is_im":false,"created":1517088488,"is_archived":false,"is_general":false,"unlinked":0,"name_normalized":"bug-slack-ruby-bot","is_shared":false,"creator":"U0VUQ6UMV","is_ext_shared":false,"is_org_shared":false,"pending_shared":[],"is_pending_ext_shared":false,"is_member":true,"is_private":true,"is_mpim":false,"last_read":"1517088488.000072","latest":{"user":"U0VUQ6UMV","text":"<@U0VUQ6UMV> has joined the group","type":"message","subtype":"group_join","ts":"1517088488.000072"},"unread_count":0,"unread_count_display":0,"is_open":true,"members":["U0VUQ6UMV","U8W60F58V"],"topic":{"value":"","creator":"","last_set":0},"purpose":{"value":"","creator":"","last_set":0},"priority":0}}
+D, [2018-01-27T14:28:47.370290 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"group_joined","channel":{"id":"G8ZKL37JP","name":"bug-slack-ruby-bot","is_channel":false,"is_group":true,"is_im":false,"created":1517088488,"is_archived":false,"is_general":false,"unlinked":0,"name_normalized":"bug-slack-ruby-bot","is_shared":false,"creator":"U0VUQ6UMV","is_ext_shared":false,"is_org_shared":false,"pending_shared":[],"is_pending_ext_shared":false,"is_member":true,"is_private":true,"is_mpim":false,"last_read":"1517088488.000072","latest":{"user":"U0VUQ6UMV","text":"<@U0VUQ6UMV> has joined the group","type":"message","subtype":"group_join","ts":"1517088488.000072"},"unread_count":0,"unread_count_display":0,"is_open":true,"members":["U0VUQ6UMV","U8W60F58V"],"topic":{"value":"","creator":"","last_set":0},"purpose":{"value":"","creator":"","last_set":0},"priority":0}}
+D, [2018-01-27T14:28:47.370946 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=created=1517088488, creator=U0VUQ6UMV, id=G8ZKL37JP, is_archived=false, is_channel=false, is_ext_shared=false, is_general=false, is_group=true, is_im=false, is_member=true, is_mpim=false, is_open=true, is_org_shared=false, is_pending_ext_shared=false, is_private=true, is_shared=false, last_read=1517088488.000072, latest=subtype=group_join, text=<@U0VUQ6UMV> has joined the group, ts=1517088488.000072, type=message, user=U0VUQ6UMV, members=["U0VUQ6UMV", "U8W60F58V"], name=bug-slack-ruby-bot, name_normalized=bug-slack-ruby-bot, pending_shared=[], priority=0, purpose=creator=, last_set=0, value=, topic=creator=, last_set=0, value=, unlinked=0, unread_count=0, unread_count_display=0, type=group_joined
+D, [2018-01-27T14:28:47.380196 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"member_joined_channel","user":"U8W60F58V","channel":"G8ZKL37JP","channel_type":"G","team":"T024WCTEF","inviter":"U0VUQ6UMV","event_ts":"1517088526.000127","ts":"1517088526.000127"}
+D, [2018-01-27T14:28:47.380398 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"member_joined_channel","user":"U8W60F58V","channel":"G8ZKL37JP","channel_type":"G","team":"T024WCTEF","inviter":"U0VUQ6UMV","event_ts":"1517088526.000127","ts":"1517088526.000127"}
+D, [2018-01-27T14:28:47.380649 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, channel_type=G, event_ts=1517088526.000127, inviter=U0VUQ6UMV, team=T024WCTEF, ts=1517088526.000127, type=member_joined_channel, user=U8W60F58V
+D, [2018-01-27T14:28:47.389236 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �{"user":"U8W60F58V","inviter":"U0VUQ6UMV","user_profile":{"avatar_hash":"134e0c99fb8f","image_72":"https:\/\/avatars.slack-edge.com\/2018-01-20\/302086671602_134e0c99fb8fe4e80210_72.png","first_name":"","real_name":"mavbot-local","display_name":"","team":"T024WCTEF","name":"mavbot-local","is_restricted":false,"is_ultra_restricted":false},"type":"message","subtype":"group_join","team":"T024WCTEF","text":"<@U8W60F58V> has joined the group","channel":"G8ZKL37JP","event_ts":"1517088526.000128","ts":"1517088526.000128"}
+D, [2018-01-27T14:28:47.389652 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"user":"U8W60F58V","inviter":"U0VUQ6UMV","user_profile":{"avatar_hash":"134e0c99fb8f","image_72":"https:\/\/avatars.slack-edge.com\/2018-01-20\/302086671602_134e0c99fb8fe4e80210_72.png","first_name":"","real_name":"mavbot-local","display_name":"","team":"T024WCTEF","name":"mavbot-local","is_restricted":false,"is_ultra_restricted":false},"type":"message","subtype":"group_join","team":"T024WCTEF","text":"<@U8W60F58V> has joined the group","channel":"G8ZKL37JP","event_ts":"1517088526.000128","ts":"1517088526.000128"}
+D, [2018-01-27T14:28:47.390044 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, event_ts=1517088526.000128, inviter=U0VUQ6UMV, subtype=group_join, team=T024WCTEF, text=<@U8W60F58V> has joined the group, ts=1517088526.000128, type=message, user=U8W60F58V, user_profile=avatar_hash=134e0c99fb8f, display_name=, first_name=, image_72=https://avatars.slack-edge.com/2018-01-20/302086671602_134e0c99fb8fe4e80210_72.png, is_restricted=false, is_ultra_restricted=false, name=mavbot-local, real_name=mavbot-local, team=T024WCTEF
+D, [2018-01-27T14:28:51.655262 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �?{"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:28:51.655409 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:28:51.655519 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, type=user_typing, user=U0VUQ6UMV
+D, [2018-01-27T14:28:54.031621 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �?{"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:28:54.031874 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:28:54.032123 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, type=user_typing, user=U0VUQ6UMV
+D, [2018-01-27T14:28:57.247027 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> help","ts":"1517088536.000109","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:28:57.247202 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> help","ts":"1517088536.000109","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:28:57.247462 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, source_team=T024WCTEF, team=T024WCTEF, text=<@U8W60F58V> help, ts=1517088536.000109, type=message, user=U0VUQ6UMV
+D, [2018-01-27T14:28:57.249584 #47697] DEBUG -- SlackRubyBot::Client#send_json: {:type=>"message", :id=>1, :text=>"*Controller Issue* - Trying to debug an issue\n\n*Commands:*\n*hallo* - This says hallo through a normal command.\n*hola* - This says hola through a controller.\n*hello* - This says hola through a controller.\n\n*Other commands:*\n*help* - Shows help information.\n*hi* - Says hello.\n\nFor getting description of the command use: *help <command>*\n\nFor more information see https://github.com/slack-ruby/slack-ruby-bot, please.\n", :channel=>"G8ZKL37JP"}
+D, [2018-01-27T14:28:57.253496 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#send_data: {"type":"message","id":1,"text":"*Controller Issue* - Trying to debug an issue\n\n*Commands:*\n*hallo* - This says hallo through a normal command.\n*hola* - This says hola through a controller.\n*hello* - This says hola through a controller.\n\n*Other commands:*\n*help* - Shows help information.\n*hi* - Says hello.\n\nFor getting description of the command use: *help \u003ccommand\u003e*\n\nFor more information see https://github.com/slack-ruby/slack-ruby-bot, please.\n","channel":"G8ZKL37JP"}
+z� vX�Y}�/�S~E/V�IiX�!X�Eu�/P�Oc�Oa�R-3�Sx� Z�Rt�G-�i�UjZ�N-�Sx�NQ�cb�Ac�'&�::Celluloid::Socket#write: ���
+-.�I~Z�At	�Hb�y�Ox�lZ�Oc�Oa�R#&�iT�N'�LlP�
+o�Y"~Z�E�An�Rx�j�Td�i�C�Td�b�Te�Cb�Ac�U~�'�L}Z�U=J�Cn�Ml�|xJ�hP�NQ�OZ�O�Ic�R`Ib�Sh�Hy�S7U�Gd�UoT�O`U�Ll�
+  -
+�El	�Q�
+           /�Ac�L/@�g5 �l>M�p/
+D, [2018-01-27T14:28:57.326813 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"desktop_notification","title":"Mavenlink","subtitle":"bug-slack-ruby-bot","msg":"1517088536.000109","content":"Jason Carter: @mavbot-local help","channel":"G8ZKL37JP","launchUri":"slack:\/\/channel?id=G8ZKL37JP&message=1517088536000109&team=T024WCTEF","avatarImage":"https:\/\/avatars.slack-edge.com\/2017-09-11\/239403475172_9d2223dadadb2a8a8c65_192.jpg","ssbFilename":"knock_brush.mp3","imageUri":null,"is_shared":false,"event_ts":"1517088536.000120"}
+D, [2018-01-27T14:28:57.327075 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"desktop_notification","title":"Mavenlink","subtitle":"bug-slack-ruby-bot","msg":"1517088536.000109","content":"Jason Carter: @mavbot-local help","channel":"G8ZKL37JP","launchUri":"slack:\/\/channel?id=G8ZKL37JP&message=1517088536000109&team=T024WCTEF","avatarImage":"https:\/\/avatars.slack-edge.com\/2017-09-11\/239403475172_9d2223dadadb2a8a8c65_192.jpg","ssbFilename":"knock_brush.mp3","imageUri":null,"is_shared":false,"event_ts":"1517088536.000120"}
+D, [2018-01-27T14:28:57.327436 #47697] DEBUG -- SlackRubyBot::Client#dispatch: avatarImage=https://avatars.slack-edge.com/2017-09-11/239403475172_9d2223dadadb2a8a8c65_192.jpg, channel=G8ZKL37JP, content=Jason Carter: @mavbot-local help, event_ts=1517088536.000120, imageUri=, is_shared=false, launchUri=slack://channel?id=G8ZKL37JP&message=1517088536000109&team=T024WCTEF, msg=1517088536.000109, ssbFilename=knock_brush.mp3, subtitle=bug-slack-ruby-bot, title=Mavenlink, type=desktop_notification
+D, [2018-01-27T14:28:57.375130 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"ok":true,"reply_to":1,"ts":"1517088536.000128","text":"*Controller Issue* - Trying to debug an issue\n\n*Commands:*\n*hallo* - This says hallo through a normal command.\n*hola* - This says hola through a controller.\n*hello* - This says hola through a controller.\n\n*Other commands:*\n*help* - Shows help information.\n*hi* - Says hello.\n\nFor getting description of the command use: *help &lt;command&gt;*\n\nFor more information see <https://github.com/slack-ruby/slack-ruby-bot>, please.\n"}
+D, [2018-01-27T14:28:57.375430 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"ok":true,"reply_to":1,"ts":"1517088536.000128","text":"*Controller Issue* - Trying to debug an issue\n\n*Commands:*\n*hallo* - This says hallo through a normal command.\n*hola* - This says hola through a controller.\n*hello* - This says hola through a controller.\n\n*Other commands:*\n*help* - Shows help information.\n*hi* - Says hello.\n\nFor getting description of the command use: *help &lt;command&gt;*\n\nFor more information see <https://github.com/slack-ruby/slack-ruby-bot>, please.\n"}
+D, [2018-01-27T14:28:57.472320 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"message","message":{"type":"message","user":"U8W60F58V","text":"*Controller Issue* - Trying to debug an issue\n\n*Commands:*\n*hallo* - This says hallo through a normal command.\n*hola* - This says hola through a controller.\n*hello* - This says hola through a controller.\n\n*Other commands:*\n*help* - Shows help information.\n*hi* - Says hello.\n\nFor getting description of the command use: *help &lt;command&gt;*\n\nFor more information see <https:\/\/github.com\/slack-ruby\/slack-ruby-bot>, please.\n","attachments":[{"service_name":"GitHub","title":"slack-ruby\/slack-ruby-bot","title_link":"https:\/\/github.com\/slack-ruby\/slack-ruby-bot","text":"slack-ruby-bot - The easiest way to write a Slack bot in Ruby.","fallback":"GitHub: slack-ruby\/slack-ruby-bot","from_url":"https:\/\/github.com\/slack-ruby\/slack-ruby-bot","thumb_url":"https:\/\/avatars2.githubusercontent.com\/u\/21144015?s=400&v=4","thumb_width":250,"thumb_height":250,"service_icon":"https:\/\/a.slack-edge.com\/bfaba\/img\/unfurl_icons\/github.png","id":1}],"ts":"1517088536.000128"},"subtype":"message_changed","hidden":true,"channel":"G8ZKL37JP","previous_message":{"type":"message","user":"U8W60F58V","text":"*Controller Issue* - Trying to debug an issue\n\n*Commands:*\n*hallo* - This says hallo through a normal command.\n*hola* - This says hola through a controller.\n*hello* - This says hola through a controller.\n\n*Other commands:*\n*help* - Shows help information.\n*hi* - Says hello.\n\nFor getting description of the command use: *help &lt;command&gt;*\n\nFor more information see <https:\/\/github.com\/slack-ruby\/slack-ruby-bot>, please.\n","ts":"1517088536.000128"},"event_ts":"1517088537.000001","ts":"1517088537.000001"}
+D, [2018-01-27T14:28:57.472568 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"message","message":{"type":"message","user":"U8W60F58V","text":"*Controller Issue* - Trying to debug an issue\n\n*Commands:*\n*hallo* - This says hallo through a normal command.\n*hola* - This says hola through a controller.\n*hello* - This says hola through a controller.\n\n*Other commands:*\n*help* - Shows help information.\n*hi* - Says hello.\n\nFor getting description of the command use: *help &lt;command&gt;*\n\nFor more information see <https:\/\/github.com\/slack-ruby\/slack-ruby-bot>, please.\n","attachments":[{"service_name":"GitHub","title":"slack-ruby\/slack-ruby-bot","title_link":"https:\/\/github.com\/slack-ruby\/slack-ruby-bot","text":"slack-ruby-bot - The easiest way to write a Slack bot in Ruby.","fallback":"GitHub: slack-ruby\/slack-ruby-bot","from_url":"https:\/\/github.com\/slack-ruby\/slack-ruby-bot","thumb_url":"https:\/\/avatars2.githubusercontent.com\/u\/21144015?s=400&v=4","thumb_width":250,"thumb_height":250,"service_icon":"https:\/\/a.slack-edge.com\/bfaba\/img\/unfurl_icons\/github.png","id":1}],"ts":"1517088536.000128"},"subtype":"message_changed","hidden":true,"channel":"G8ZKL37JP","previous_message":{"type":"message","user":"U8W60F58V","text":"*Controller Issue* - Trying to debug an issue\n\n*Commands:*\n*hallo* - This says hallo through a normal command.\n*hola* - This says hola through a controller.\n*hello* - This says hola through a controller.\n\n*Other commands:*\n*help* - Shows help information.\n*hi* - Says hello.\n\nFor getting description of the command use: *help &lt;command&gt;*\n\nFor more information see <https:\/\/github.com\/slack-ruby\/slack-ruby-bot>, please.\n","ts":"1517088536.000128"},"event_ts":"1517088537.000001","ts":"1517088537.000001"}
+D, [2018-01-27T14:28:57.472992 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, event_ts=1517088537.000001, hidden=true, message=attachments=[#<Slack::Messages::Message fallback="GitHub: slack-ruby/slack-ruby-bot" from_url="https://github.com/slack-ruby/slack-ruby-bot" id=1 service_icon="https://a.slack-edge.com/bfaba/img/unfurl_icons/github.png" service_name="GitHub" text="slack-ruby-bot - The easiest way to write a Slack bot in Ruby." thumb_height=250 thumb_url="https://avatars2.githubusercontent.com/u/21144015?s=400&v=4" thumb_width=250 title="slack-ruby/slack-ruby-bot" title_link="https://github.com/slack-ruby/slack-ruby-bot">], text=*Controller Issue* - Trying to debug an issue
+
+*Commands:*
+*hallo* - This says hallo through a normal command.
+*hola* - This says hola through a controller.
+*hello* - This says hola through a controller.
+
+*Other commands:*
+*help* - Shows help information.
+*hi* - Says hello.
+
+For getting description of the command use: *help &lt;command&gt;*
+
+For more information see <https://github.com/slack-ruby/slack-ruby-bot>, please.
+, ts=1517088536.000128, type=message, user=U8W60F58V, previous_message=text=*Controller Issue* - Trying to debug an issue
+
+*Commands:*
+*hallo* - This says hallo through a normal command.
+*hola* - This says hola through a controller.
+*hello* - This says hola through a controller.
+
+*Other commands:*
+*help* - Shows help information.
+*hi* - Says hello.
+
+For getting description of the command use: *help &lt;command&gt;*
+
+For more information see <https://github.com/slack-ruby/slack-ruby-bot>, please.
+, ts=1517088536.000128, type=message, user=U8W60F58V, subtype=message_changed, ts=1517088537.000001, type=message
+D, [2018-01-27T14:28:59.153366 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �?{"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:28:59.153490 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:28:59.153616 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, type=user_typing, user=U0VUQ6UMV
+D, [2018-01-27T14:29:03.952969 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> hola","ts":"1517088543.000062","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:03.953148 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> hola","ts":"1517088543.000062","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:03.953361 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, source_team=T024WCTEF, team=T024WCTEF, text=<@U8W60F58V> hola, ts=1517088543.000062, type=message, user=U0VUQ6UMV
+D, [2018-01-27T14:29:03.955532 #47697] DEBUG -- SlackRubyBot::Client#send_json: {:type=>"message", :id=>2, :text=>"Hola!", :channel=>"G8ZKL37JP"}
+D, [2018-01-27T14:29:03.955871 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#send_data: {"type":"message","id":2,"text":"Hola!","channel":"G8ZKL37JP"}
+D, [2018-01-27T14:29:03.956005 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#write: �� ��i[¯P��S��S��
+                                                                                                                        ��D��[
+                                                                                                                              ¯
+                                                                                                                               X��S��A��E�N����.��%ב9�
+D, [2018-01-27T14:29:04.053789 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"desktop_notification","title":"Mavenlink","subtitle":"bug-slack-ruby-bot","msg":"1517088543.000062","content":"Jason Carter: @mavbot-local hola","channel":"G8ZKL37JP","launchUri":"slack:\/\/channel?id=G8ZKL37JP&message=1517088543000062&team=T024WCTEF","avatarImage":"https:\/\/avatars.slack-edge.com\/2017-09-11\/239403475172_9d2223dadadb2a8a8c65_192.jpg","ssbFilename":"knock_brush.mp3","imageUri":null,"is_shared":false,"event_ts":"1517088543.000081"}
+D, [2018-01-27T14:29:04.053979 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"desktop_notification","title":"Mavenlink","subtitle":"bug-slack-ruby-bot","msg":"1517088543.000062","content":"Jason Carter: @mavbot-local hola","channel":"G8ZKL37JP","launchUri":"slack:\/\/channel?id=G8ZKL37JP&message=1517088543000062&team=T024WCTEF","avatarImage":"https:\/\/avatars.slack-edge.com\/2017-09-11\/239403475172_9d2223dadadb2a8a8c65_192.jpg","ssbFilename":"knock_brush.mp3","imageUri":null,"is_shared":false,"event_ts":"1517088543.000081"}
+D, [2018-01-27T14:29:04.054223 #47697] DEBUG -- SlackRubyBot::Client#dispatch: avatarImage=https://avatars.slack-edge.com/2017-09-11/239403475172_9d2223dadadb2a8a8c65_192.jpg, channel=G8ZKL37JP, content=Jason Carter: @mavbot-local hola, event_ts=1517088543.000081, imageUri=, is_shared=false, launchUri=slack://channel?id=G8ZKL37JP&message=1517088543000062&team=T024WCTEF, msg=1517088543.000062, ssbFilename=knock_brush.mp3, subtitle=bug-slack-ruby-bot, title=Mavenlink, type=desktop_notification
+D, [2018-01-27T14:29:04.079042 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �@{"ok":true,"reply_to":2,"ts":"1517088543.000085","text":"Hola!"}
+D, [2018-01-27T14:29:04.079189 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"ok":true,"reply_to":2,"ts":"1517088543.000085","text":"Hola!"}
+D, [2018-01-27T14:29:04.491156 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �?{"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:04.491460 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:04.491617 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, type=user_typing, user=U0VUQ6UMV
+D, [2018-01-27T14:29:07.561459 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> hallo","ts":"1517088547.000067","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:07.561646 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> hallo","ts":"1517088547.000067","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:07.561841 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, source_team=T024WCTEF, team=T024WCTEF, text=<@U8W60F58V> hallo, ts=1517088547.000067, type=message, user=U0VUQ6UMV
+D, [2018-01-27T14:29:07.562969 #47697] DEBUG -- SlackRubyBot::Client#send_json: {:type=>"message", :id=>3, :text=>"Hallo!", :channel=>"G8ZKL37JP"}
+D, [2018-01-27T14:29:07.563480 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#send_data: {"type":"message","id":3,"text":"Hallo!","channel":"G8ZKL37JP"}
+D, [2018-01-27T14:29:07.563668 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#write: �����o���9ѥ�~���|���9��!ث�o���9ѥ�z���:ɫ�x���u��!���A�˻,�תf
+D, [2018-01-27T14:29:07.646690 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"desktop_notification","title":"Mavenlink","subtitle":"bug-slack-ruby-bot","msg":"1517088547.000067","content":"Jason Carter: @mavbot-local hallo","channel":"G8ZKL37JP","launchUri":"slack:\/\/channel?id=G8ZKL37JP&message=1517088547000067&team=T024WCTEF","avatarImage":"https:\/\/avatars.slack-edge.com\/2017-09-11\/239403475172_9d2223dadadb2a8a8c65_192.jpg","ssbFilename":"knock_brush.mp3","imageUri":null,"is_shared":false,"event_ts":"1517088547.000076"}
+D, [2018-01-27T14:29:07.646818 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"desktop_notification","title":"Mavenlink","subtitle":"bug-slack-ruby-bot","msg":"1517088547.000067","content":"Jason Carter: @mavbot-local hallo","channel":"G8ZKL37JP","launchUri":"slack:\/\/channel?id=G8ZKL37JP&message=1517088547000067&team=T024WCTEF","avatarImage":"https:\/\/avatars.slack-edge.com\/2017-09-11\/239403475172_9d2223dadadb2a8a8c65_192.jpg","ssbFilename":"knock_brush.mp3","imageUri":null,"is_shared":false,"event_ts":"1517088547.000076"}
+D, [2018-01-27T14:29:07.647015 #47697] DEBUG -- SlackRubyBot::Client#dispatch: avatarImage=https://avatars.slack-edge.com/2017-09-11/239403475172_9d2223dadadb2a8a8c65_192.jpg, channel=G8ZKL37JP, content=Jason Carter: @mavbot-local hallo, event_ts=1517088547.000076, imageUri=, is_shared=false, launchUri=slack://channel?id=G8ZKL37JP&message=1517088547000067&team=T024WCTEF, msg=1517088547.000067, ssbFilename=knock_brush.mp3, subtitle=bug-slack-ruby-bot, title=Mavenlink, type=desktop_notification
+D, [2018-01-27T14:29:07.685493 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �A{"ok":true,"reply_to":3,"ts":"1517088547.000086","text":"Hallo!"}
+D, [2018-01-27T14:29:07.685647 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"ok":true,"reply_to":3,"ts":"1517088547.000086","text":"Hallo!"}
+D, [2018-01-27T14:29:08.148767 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �?{"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:08.148884 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:08.149013 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, type=user_typing, user=U0VUQ6UMV
+D, [2018-01-27T14:29:12.870714 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> hello","ts":"1517088552.000070","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:12.870876 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> hello","ts":"1517088552.000070","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:12.871027 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, source_team=T024WCTEF, team=T024WCTEF, text=<@U8W60F58V> hello, ts=1517088552.000070, type=message, user=U0VUQ6UMV
+D, [2018-01-27T14:29:12.872487 #47697] DEBUG -- SlackRubyBot::Client#send_json: {:type=>"message", :id=>4, :text=>"Hello!", :channel=>"G8ZKL37JP"}
+D, [2018-01-27T14:29:12.872981 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#send_data: {"type":"message","id":4,"text":"Hello!","channel":"G8ZKL37JP"}
+D, [2018-01-27T14:29:12.873183 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#write: �������n��-���d诞r���~���#��r��-���{��5���r���5��\���]��
+D, [2018-01-27T14:29:12.968406 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"desktop_notification","title":"Mavenlink","subtitle":"bug-slack-ruby-bot","msg":"1517088552.000070","content":"Jason Carter: @mavbot-local hello","channel":"G8ZKL37JP","launchUri":"slack:\/\/channel?id=G8ZKL37JP&message=1517088552000070&team=T024WCTEF","avatarImage":"https:\/\/avatars.slack-edge.com\/2017-09-11\/239403475172_9d2223dadadb2a8a8c65_192.jpg","ssbFilename":"knock_brush.mp3","imageUri":null,"is_shared":false,"event_ts":"1517088552.000077"}
+D, [2018-01-27T14:29:12.968610 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"desktop_notification","title":"Mavenlink","subtitle":"bug-slack-ruby-bot","msg":"1517088552.000070","content":"Jason Carter: @mavbot-local hello","channel":"G8ZKL37JP","launchUri":"slack:\/\/channel?id=G8ZKL37JP&message=1517088552000070&team=T024WCTEF","avatarImage":"https:\/\/avatars.slack-edge.com\/2017-09-11\/239403475172_9d2223dadadb2a8a8c65_192.jpg","ssbFilename":"knock_brush.mp3","imageUri":null,"is_shared":false,"event_ts":"1517088552.000077"}
+D, [2018-01-27T14:29:12.968837 #47697] DEBUG -- SlackRubyBot::Client#dispatch: avatarImage=https://avatars.slack-edge.com/2017-09-11/239403475172_9d2223dadadb2a8a8c65_192.jpg, channel=G8ZKL37JP, content=Jason Carter: @mavbot-local hello, event_ts=1517088552.000077, imageUri=, is_shared=false, launchUri=slack://channel?id=G8ZKL37JP&message=1517088552000070&team=T024WCTEF, msg=1517088552.000070, ssbFilename=knock_brush.mp3, subtitle=bug-slack-ruby-bot, title=Mavenlink, type=desktop_notification
+D, [2018-01-27T14:29:12.995688 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �A{"ok":true,"reply_to":4,"ts":"1517088552.000079","text":"Hello!"}
+D, [2018-01-27T14:29:12.996278 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"ok":true,"reply_to":4,"ts":"1517088552.000079","text":"Hello!"}
+D, [2018-01-27T14:29:13.603536 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �?{"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:13.603726 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:13.603967 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, type=user_typing, user=U0VUQ6UMV
+D, [2018-01-27T14:29:17.534450 #47697] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> greetings","ts":"1517088557.000051","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:17.534599 #47697] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> greetings","ts":"1517088557.000051","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:17.534756 #47697] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, source_team=T024WCTEF, team=T024WCTEF, text=<@U8W60F58V> greetings, ts=1517088557.000051, type=message, user=U0VUQ6UMV
+E, [2018-01-27T14:29:17.535890 #47697] ERROR -- : Actor crashed!
+NotImplementedError: <@U8W60F58V> greetings
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/commands/base.rb:75:in `block in invoke'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/commands/base.rb:56:in `each_pair'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/commands/base.rb:56:in `invoke'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `block in call'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `detect'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `call'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/set.rb:33:in `block (2 levels) in register_callback'
+	/Users/mavenlink/.rvm/rubies/ruby-2.3.5/lib/ruby/2.3.0/set.rb:306:in `each_key'
+	/Users/mavenlink/.rvm/rubies/ruby-2.3.5/lib/ruby/2.3.0/set.rb:306:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/set.rb:32:in `block in register_callback'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:198:in `block in run_callbacks'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:197:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:197:in `run_callbacks'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:178:in `dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:93:in `block (2 levels) in run_loop'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:39:in `block in emit'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:38:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:38:in `emit'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:398:in `emit_message'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:381:in `emit_frame'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:123:in `parse'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/client.rb:63:in `parse'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/concurrency/celluloid.rb:57:in `handle_read'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/calls.rb:28:in `public_send'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/calls.rb:28:in `dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/call/async.rb:7:in `dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/cell.rb:50:in `block in dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/cell.rb:76:in `block in task'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:339:in `block in task'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/task.rb:44:in `block in initialize'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/task/fibered.rb:14:in `block in create'
+ERROR: task was terminated
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/task/fibered.rb:35:in `terminate'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:323:in `block in cleanup'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:321:in `each'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:321:in `cleanup'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:307:in `shutdown'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:299:in `handle_crash'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:171:in `rescue in run'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:150:in `run'E, [2018-01-27T14:29:17.537203 #47697] ERROR -- : thread crashed
+NotImplementedError: <@U8W60F58V> greetings
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/commands/base.rb:75:in `block in invoke'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/commands/base.rb:56:in `each_pair'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/commands/base.rb:56:in `invoke'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `block in call'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `detect'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `call'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/set.rb:33:in `block (2 levels) in register_callback'
+	/Users/mavenlink/.rvm/rubies/ruby-2.3.5/lib/ruby/2.3.0/set.rb:306:in `each_key'
+	/Users/mavenlink/.rvm/rubies/ruby-2.3.5/lib/ruby/2.3.0/set.rb:306:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/set.rb:32:in `block in register_callback'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:198:in `block in run_callbacks'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:197:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:197:in `run_callbacks'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:178:in `dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:93:in `block (2 levels) in run_loop'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:39:in `block in emit'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:38:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:38:in `emit'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:398:in `emit_message'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:381:in `emit_frame'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:123:in `parse'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/client.rb:63:in `parse'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/concurrency/celluloid.rb:57:in `handle_read'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/calls.rb:28:in `public_send'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/calls.rb:28:in `dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/call/async.rb:7:in `dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/cell.rb:50:in `block in dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/cell.rb:76:in `block in task'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:339:in `block in task'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/task.rb:44:in `block in initialize'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/task/fibered.rb:14:in `block in create'
+
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:131:in `block in start'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-essentials-0.20.5/lib/celluloid/internals/thread_handle.rb:14:in `block in initialize'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor/system.rb:78:in `block in get_thread'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/group/spawner.rb:50:in `block in instantiate'
+(celluloid):0:in `remote procedure call'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/call/sync.rb:45:in `value'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/proxy/sync.rb:22:in `method_missing'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:51:in `start!'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:37:in `start!'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:29:in `block (2 levels) in run'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:69:in `handle_exceptions'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:27:in `block in run'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:26:in `loop'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:26:in `run'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/bot.rb:6:in `run'
+run.rb:9:in `<main>'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/task/fibered.rb:35:in `terminate': task was terminated (Celluloid::TaskTerminated)
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:323:in `block in cleanup'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:321:in `each'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:321:in `cleanup'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:307:in `shutdown'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:299:in `handle_crash'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:171:in `rescue in run'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:150:in `run'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:131:in `block in start'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-essentials-0.20.5/lib/celluloid/internals/thread_handle.rb:14:in `block in initialize'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor/system.rb:78:in `block in get_thread'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/group/spawner.rb:50:in `block in instantiate'
+	from (celluloid):0:in `remote procedure call'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/call/sync.rb:45:in `value'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/proxy/sync.rb:22:in `method_missing'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:51:in `start!'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:37:in `start!'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:29:in `block (2 levels) in run'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:69:in `handle_exceptions'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:27:in `block in run'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:26:in `loop'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:26:in `run'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/bot.rb:6:in `run'
+	from run.rb:9:in `<main>'
+~/workspace/controller-issue (master +) $ ruby run.rb
+I, [2018-01-27T14:29:29.022578 #47731]  INFO -- : post https://slack.com/api/rtm.start
+D, [2018-01-27T14:29:29.022730 #47731] DEBUG -- request: Accept: "application/json; charset=utf-8"
+User-Agent: "Slack Ruby Client/0.10.0"
+Content-Type: "application/x-www-form-urlencoded"
+I, [2018-01-27T14:29:29.626924 #47731]  INFO -- Status: 200
+D, [2018-01-27T14:29:29.627055 #47731] DEBUG -- response: content-type: "application/json; charset=utf-8"
+transfer-encoding: "chunked"
+connection: "close"
+access-control-allow-origin: "*"
+cache-control: "private, no-cache, no-store, must-revalidate"
+date: "Sat, 27 Jan 2018 21:29:29 GMT"
+expires: "Mon, 26 Jul 1997 05:00:00 GMT"
+pragma: "no-cache"
+referrer-policy: "no-referrer"
+server: "Apache"
+strict-transport-security: "max-age=31536000; includeSubDomains; preload"
+vary: "Accept-Encoding"
+x-accepted-oauth-scopes: "rtm:stream,client"
+x-content-type-options: "nosniff"
+x-oauth-scopes: "identify,read,post,client,apps"
+x-slack-backend: "h"
+x-slack-req-id: "cf54c4fe-6bd3-4d47-bcf9-a0eb17bf0ddf"
+x-xss-protection: "0"
+x-cache: "Miss from cloudfront"
+via: "1.1 dc553909528b8b63475c922dc07d8ba6.cloudfront.net (CloudFront)"
+x-amz-cf-id: "rW9UQepbBaHGaQQDgmI34TZmVKGE9OvPDfnl6YXEXtf3xZgOtLNSwA=="
+D, [2018-01-27T14:29:29.958268 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#connect!: WebSocket::Driver::Client
+D, [2018-01-27T14:29:30.126187 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#write: GET /websocket/kPwXviT1VtSiFHyYo_dE7U5i_esgJ4Bg7r1KF7ohaIX8LkTijJvnfX-Qjh3SfVk7q7UTZr8PMEpaJv19PeCwkxR5UUslHI80Q9nvANRyLpy4rKl0rny9elmnQVIFXMNOnZ723TVIEZ0=/2?dp=1 HTTP/1.1
+Host: cerberus-xxxx.lb.slack-msgs.com
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: L8RSBy5sy7DwPwiEMP4RfA==
+Sec-WebSocket-Version: 13
+
+
+D, [2018-01-27T14:29:30.163952 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: HTTP/1.1 101 Switching Protocols
+upgrade: websocket
+connection: upgrade
+sec-websocket-accept: QFXCC2PeUUOFe3LLiDcuCWBxJfA=
+X-Via: haproxy-lb-mp-lbcert-pdx-ln7q
+
+
+D, [2018-01-27T14:29:30.167642 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::OpenEvent
+D, [2018-01-27T14:29:30.346213 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �{"type": "hello"}
+D, [2018-01-27T14:29:30.348955 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type": "hello"}
+D, [2018-01-27T14:29:30.349047 #47731] DEBUG -- SlackRubyBot::Client#dispatch: type=hello
+I, [2018-01-27T14:29:30.349101 #47731]  INFO -- : Successfully connected team Mavenlink (T024WCTEF) to https://mavenlink.slack.com.
+D, [2018-01-27T14:29:32.868430 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �?{"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:32.868580 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:32.868710 #47731] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, type=user_typing, user=U0VUQ6UMV
+D, [2018-01-27T14:29:36.268212 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"_it crashed here_","ts":"1517088575.000130","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:36.268454 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"_it crashed here_","ts":"1517088575.000130","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:36.268710 #47731] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, source_team=T024WCTEF, team=T024WCTEF, text=_it crashed here_, ts=1517088575.000130, type=message, user=U0VUQ6UMV
+D, [2018-01-27T14:29:37.537571 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �?{"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:37.537688 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:37.537805 #47731] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, type=user_typing, user=U0VUQ6UMV
+D, [2018-01-27T14:29:42.556054 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �?{"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:42.556207 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:42.556443 #47731] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, type=user_typing, user=U0VUQ6UMV
+D, [2018-01-27T14:29:42.790409 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> unknown command","ts":"1517088582.000079","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:42.790658 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> unknown command","ts":"1517088582.000079","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:42.791110 #47731] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, source_team=T024WCTEF, team=T024WCTEF, text=<@U8W60F58V> unknown command, ts=1517088582.000079, type=message, user=U0VUQ6UMV
+D, [2018-01-27T14:29:42.792598 #47731] DEBUG -- SlackRubyBot::Client#send_json: {:type=>"message", :id=>1, :text=>"Sorry <@U0VUQ6UMV>, I don't understand that command!", :channel=>"G8ZKL37JP"}
+D, [2018-01-27T14:29:42.796534 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#send_data: {"type":"message","id":1,"text":"Sorry \u003c@U0VUQ6UMV\u003e, I don't understand that command!","channel":"G8ZKL37JP"}
+D, [2018-01-27T14:29:42.796723 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#write: ���j����κP������؇����[։��ߺP����Ҹ6���Y���Z���\���6���Y���#����߸����������߸	���
+  �ϹH։�������H���!��� ���
+D, [2018-01-27T14:29:42.903245 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"desktop_notification","title":"Mavenlink","subtitle":"bug-slack-ruby-bot","msg":"1517088582.000079","content":"Jason Carter: @mavbot-local unknown command","channel":"G8ZKL37JP","launchUri":"slack:\/\/channel?id=G8ZKL37JP&message=1517088582000079&team=T024WCTEF","avatarImage":"https:\/\/avatars.slack-edge.com\/2017-09-11\/239403475172_9d2223dadadb2a8a8c65_192.jpg","ssbFilename":"knock_brush.mp3","imageUri":null,"is_shared":false,"event_ts":"1517088582.000087"}
+D, [2018-01-27T14:29:42.903390 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"desktop_notification","title":"Mavenlink","subtitle":"bug-slack-ruby-bot","msg":"1517088582.000079","content":"Jason Carter: @mavbot-local unknown command","channel":"G8ZKL37JP","launchUri":"slack:\/\/channel?id=G8ZKL37JP&message=1517088582000079&team=T024WCTEF","avatarImage":"https:\/\/avatars.slack-edge.com\/2017-09-11\/239403475172_9d2223dadadb2a8a8c65_192.jpg","ssbFilename":"knock_brush.mp3","imageUri":null,"is_shared":false,"event_ts":"1517088582.000087"}
+D, [2018-01-27T14:29:42.903672 #47731] DEBUG -- SlackRubyBot::Client#dispatch: avatarImage=https://avatars.slack-edge.com/2017-09-11/239403475172_9d2223dadadb2a8a8c65_192.jpg, channel=G8ZKL37JP, content=Jason Carter: @mavbot-local unknown command, event_ts=1517088582.000087, imageUri=, is_shared=false, launchUri=slack://channel?id=G8ZKL37JP&message=1517088582000079&team=T024WCTEF, msg=1517088582.000079, ssbFilename=knock_brush.mp3, subtitle=bug-slack-ruby-bot, title=Mavenlink, type=desktop_notification
+D, [2018-01-27T14:29:42.915859 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �o{"ok":true,"reply_to":1,"ts":"1517088582.000088","text":"Sorry <@U0VUQ6UMV>, I don't understand that command!"}
+D, [2018-01-27T14:29:42.916534 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"ok":true,"reply_to":1,"ts":"1517088582.000088","text":"Sorry <@U0VUQ6UMV>, I don't understand that command!"}
+D, [2018-01-27T14:29:43.599082 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �?{"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:43.599386 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:43.599811 #47731] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, type=user_typing, user=U0VUQ6UMV
+D, [2018-01-27T14:29:48.874905 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> greeting","ts":"1517088588.000070","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:48.875046 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> greeting","ts":"1517088588.000070","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:48.875422 #47731] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, source_team=T024WCTEF, team=T024WCTEF, text=<@U8W60F58V> greeting, ts=1517088588.000070, type=message, user=U0VUQ6UMV
+D, [2018-01-27T14:29:48.876337 #47731] DEBUG -- SlackRubyBot::Client#send_json: {:type=>"message", :id=>2, :text=>"Sorry <@U0VUQ6UMV>, I don't understand that command!", :channel=>"G8ZKL37JP"}
+D, [2018-01-27T14:29:48.876505 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#send_data: {"type":"message","id":2,"text":"Sorry \u003c@U0VUQ6UMV\u003e, I don't understand that command!","channel":"G8ZKL37JP"}
+D, [2018-01-27T14:29:48.876578 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#write: ������򀯔���㊬���ݤ��Ӽ���򜧅���鋭������ʼ��ɉ��ϊ�Х���ʺݦ����������㋬�痻�򑾅����똱�����呾�蜳Ӽۘ�ܲ�±����
+D, [2018-01-27T14:29:48.958244 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"desktop_notification","title":"Mavenlink","subtitle":"bug-slack-ruby-bot","msg":"1517088588.000070","content":"Jason Carter: @mavbot-local greeting","channel":"G8ZKL37JP","launchUri":"slack:\/\/channel?id=G8ZKL37JP&message=1517088588000070&team=T024WCTEF","avatarImage":"https:\/\/avatars.slack-edge.com\/2017-09-11\/239403475172_9d2223dadadb2a8a8c65_192.jpg","ssbFilename":"knock_brush.mp3","imageUri":null,"is_shared":false,"event_ts":"1517088588.000083"}
+D, [2018-01-27T14:29:48.958408 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"desktop_notification","title":"Mavenlink","subtitle":"bug-slack-ruby-bot","msg":"1517088588.000070","content":"Jason Carter: @mavbot-local greeting","channel":"G8ZKL37JP","launchUri":"slack:\/\/channel?id=G8ZKL37JP&message=1517088588000070&team=T024WCTEF","avatarImage":"https:\/\/avatars.slack-edge.com\/2017-09-11\/239403475172_9d2223dadadb2a8a8c65_192.jpg","ssbFilename":"knock_brush.mp3","imageUri":null,"is_shared":false,"event_ts":"1517088588.000083"}
+D, [2018-01-27T14:29:48.958551 #47731] DEBUG -- SlackRubyBot::Client#dispatch: avatarImage=https://avatars.slack-edge.com/2017-09-11/239403475172_9d2223dadadb2a8a8c65_192.jpg, channel=G8ZKL37JP, content=Jason Carter: @mavbot-local greeting, event_ts=1517088588.000083, imageUri=, is_shared=false, launchUri=slack://channel?id=G8ZKL37JP&message=1517088588000070&team=T024WCTEF, msg=1517088588.000070, ssbFilename=knock_brush.mp3, subtitle=bug-slack-ruby-bot, title=Mavenlink, type=desktop_notification
+D, [2018-01-27T14:29:48.994502 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �o{"ok":true,"reply_to":2,"ts":"1517088588.000087","text":"Sorry <@U0VUQ6UMV>, I don't understand that command!"}
+D, [2018-01-27T14:29:48.994638 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"ok":true,"reply_to":2,"ts":"1517088588.000087","text":"Sorry <@U0VUQ6UMV>, I don't understand that command!"}
+D, [2018-01-27T14:29:49.523550 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �?{"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:49.523859 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:49.524115 #47731] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, type=user_typing, user=U0VUQ6UMV
+D, [2018-01-27T14:29:54.623495 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �?{"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:54.623607 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"user_typing","channel":"G8ZKL37JP","user":"U0VUQ6UMV"}
+D, [2018-01-27T14:29:54.623704 #47731] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, type=user_typing, user=U0VUQ6UMV
+D, [2018-01-27T14:29:54.983734 #47731] DEBUG -- Slack::RealTime::Concurrency::Celluloid::Socket#handle_read: �~�{"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> greetings with text after","ts":"1517088594.000085","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:54.983905 #47731] DEBUG -- SlackRubyBot::Client#run_loop: WebSocket::Driver::MessageEvent, {"type":"message","channel":"G8ZKL37JP","user":"U0VUQ6UMV","text":"<@U8W60F58V> greetings with text after","ts":"1517088594.000085","source_team":"T024WCTEF","team":"T024WCTEF"}
+D, [2018-01-27T14:29:54.984066 #47731] DEBUG -- SlackRubyBot::Client#dispatch: channel=G8ZKL37JP, source_team=T024WCTEF, team=T024WCTEF, text=<@U8W60F58V> greetings with text after, ts=1517088594.000085, type=message, user=U0VUQ6UMV
+E, [2018-01-27T14:29:54.985166 #47731] ERROR -- : Actor crashed!
+NotImplementedError: <@U8W60F58V> greetings with text after
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/commands/base.rb:75:in `block in invoke'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/commands/base.rb:56:in `each_pair'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/commands/base.rb:56:in `invoke'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `block in call'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `detect'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `call'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/set.rb:33:in `block (2 levels) in register_callback'
+	/Users/mavenlink/.rvm/rubies/ruby-2.3.5/lib/ruby/2.3.0/set.rb:306:in `each_key'
+	/Users/mavenlink/.rvm/rubies/ruby-2.3.5/lib/ruby/2.3.0/set.rb:306:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/set.rb:32:in `block in register_callback'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:198:in `block in run_callbacks'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:197:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:197:in `run_callbacks'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:178:in `dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:93:in `block (2 levels) in run_loop'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:39:in `block in emit'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:38:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:38:in `emit'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:398:in `emit_message'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:381:in `emit_frame'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:123:in `parse'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/client.rb:63:in `parse'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/concurrency/celluloid.rb:57:in `handle_read'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/calls.rb:28:in `public_send'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/calls.rb:28:in `dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/call/async.rb:7:in `dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/cell.rb:50:in `block in dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/cell.rb:76:in `block in task'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:339:in `block in task'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/task.rb:44:in `block in initialize'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/task/fibered.rb:14:in `block in create'
+ERROR: task was terminatedE, [2018-01-27T14:29:54.986690 #47731] ERROR -- : thread crashed
+NotImplementedError: <@U8W60F58V> greetings with text after
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/commands/base.rb:75:in `block in invoke'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/commands/base.rb:56:in `each_pair'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/commands/base.rb:56:in `invoke'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `block in call'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `detect'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/message.rb:7:in `call'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/set.rb:33:in `block (2 levels) in register_callback'
+	/Users/mavenlink/.rvm/rubies/ruby-2.3.5/lib/ruby/2.3.0/set.rb:306:in `each_key'
+	/Users/mavenlink/.rvm/rubies/ruby-2.3.5/lib/ruby/2.3.0/set.rb:306:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/hooks/set.rb:32:in `block in register_callback'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:198:in `block in run_callbacks'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:197:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:197:in `run_callbacks'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:178:in `dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:93:in `block (2 levels) in run_loop'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:39:in `block in emit'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:38:in `each'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:38:in `emit'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:398:in `emit_message'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:381:in `emit_frame'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:123:in `parse'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/websocket-driver-0.7.0/lib/websocket/driver/client.rb:63:in `parse'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/concurrency/celluloid.rb:57:in `handle_read'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/calls.rb:28:in `public_send'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/calls.rb:28:in `dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/call/async.rb:7:in `dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/cell.rb:50:in `block in dispatch'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/cell.rb:76:in `block in task'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:339:in `block in task'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/task.rb:44:in `block in initialize'
+	/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/task/fibered.rb:14:in `block in create'
+
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/task/fibered.rb:35:in `terminate'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:323:in `block in cleanup'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:321:in `each'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:321:in `cleanup'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:307:in `shutdown'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:299:in `handle_crash'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:171:in `rescue in run'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:150:in `run'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:131:in `block in start'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-essentials-0.20.5/lib/celluloid/internals/thread_handle.rb:14:in `block in initialize'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor/system.rb:78:in `block in get_thread'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/group/spawner.rb:50:in `block in instantiate'
+(celluloid):0:in `remote procedure call'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/call/sync.rb:45:in `value'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/proxy/sync.rb:22:in `method_missing'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:51:in `start!'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:37:in `start!'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:29:in `block (2 levels) in run'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:69:in `handle_exceptions'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:27:in `block in run'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:26:in `loop'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:26:in `run'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/bot.rb:6:in `run'
+run.rb:9:in `<main>'
+/Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/task/fibered.rb:35:in `terminate': task was terminated (Celluloid::TaskTerminated)
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:323:in `block in cleanup'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:321:in `each'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:321:in `cleanup'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:307:in `shutdown'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:299:in `handle_crash'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:171:in `rescue in run'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:150:in `run'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor.rb:131:in `block in start'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-essentials-0.20.5/lib/celluloid/internals/thread_handle.rb:14:in `block in initialize'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/actor/system.rb:78:in `block in get_thread'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/group/spawner.rb:50:in `block in instantiate'
+	from (celluloid):0:in `remote procedure call'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/call/sync.rb:45:in `value'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/celluloid-0.17.3/lib/celluloid/proxy/sync.rb:22:in `method_missing'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-client-0.10.0/lib/slack/real_time/client.rb:51:in `start!'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:37:in `start!'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:29:in `block (2 levels) in run'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:69:in `handle_exceptions'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:27:in `block in run'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:26:in `loop'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/server.rb:26:in `run'
+	from /Users/mavenlink/.rvm/gems/ruby-2.3.5@controller-issue/gems/slack-ruby-bot-0.10.4/lib/slack-ruby-bot/bot.rb:6:in `run'
+	from run.rb:9:in `<main>'
